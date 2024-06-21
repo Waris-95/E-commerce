@@ -27,5 +27,4 @@ def undo_styles():
         db.session.execute(f"TRUNCATE table {SCHEMA}.styles RESTART IDENTITY CASCADE;")
     else:
         db.session.execute(text("DELETE FROM styles"))
-
     db.session.commit()

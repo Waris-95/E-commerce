@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 class OrderItem (db.Model):
     __tablename__ = 'order_items'
 
-    if environment == 'production':
+    if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)

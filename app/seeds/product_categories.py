@@ -264,5 +264,4 @@ def undo_product_types():
         db.session.execute(f"TRUNCATE table {SCHEMA}.product_types RESTART IDENTITY CASCADE;")
     else:
         db.session.execute(text("DELETE FROM product_types"))
-
     db.session.commit()
